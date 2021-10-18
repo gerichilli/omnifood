@@ -1,0 +1,63 @@
+/*
+    SPACING SYSTEM (px)
+    2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+    FONT SIZE SYSTEM (px)
+    10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+    FONT WEIGHT SYSTEM 
+    400 / 700
+    BORDER RADIUS SYSTEM 
+    8px / 12px
+    LINE HEIGHT SYSTEM 
+    default 2 / small 1.05 / medium 1.2 / regular 1.6
+*/
+
+/* COLORS */
+$orange: #e67e22;
+$orange-dark: #cf711f;
+$orange-light: #fae5d3;
+$orange-medium: #eb984e;
+
+$tint: #fdf2e9;
+
+$grey-0: #fff;
+$grey-1: #ddd;
+$grey-2: #888;
+$grey-3: #555;
+$grey-4: #333;
+
+$brown: #45260a;
+$green: #51cf66;
+$lime: #94d82d;
+$yellow: #fcc419;
+
+$alpha-1: rgba(0,0,0,0.1);
+$alpha-2: rgba(0,0,0,0.08);
+
+/* UI COLORS */
+$main-color: $orange;
+$on-main-color: $grey-0;
+$main-dark-color: $orange-dark;
+
+$base-color: $grey-3;
+$base-dark-color: $grey-4;
+
+$main-background: $tint;
+
+/* SPACING */
+$section-padding: 3.2rem;
+$section-spacing: 9.6rem;
+$section-spacing-md: 6.4rem;
+$section-spacing-rg: 4.8rem;
+
+/* ELEMENT SIZING */
+$hero-width: 130rem;
+$hero-width-xl: 120rem;
+$content-width: 120rem;
+
+$gap-large: 9.6rem;
+$gap-large-md: 6.4rem;
+
+$gap-medium: 6.4rem;
+$gap-medium-md: 4.8rem;
+
+/* BORDER RADIUS */

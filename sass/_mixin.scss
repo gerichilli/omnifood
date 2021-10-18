@@ -1,0 +1,67 @@
+@mixin respond($breakpoint) {
+    /* MORE THAN 1936px (Large desktops) */
+    @if $breakpoint == tv {
+      @media only screen and (min-width: 121em) {
+        @content;
+      }
+    }
+    /* BELOW 1344px (Smaller desktops) */
+    @if $breakpoint == small-desktop {
+      @media only screen and (max-width: 84em) {
+        @content;
+      }
+    }
+
+    /* BELOW 1200px (Landscape Tablets) */
+    @if $breakpoint == tab-land {
+      @media only screen and (max-width: 75em) {
+        @content;
+      }
+    }
+
+    /* BELOW 944px (Tablets) */
+    @if $breakpoint == tab {
+      @media only screen and (max-width: 59em) {
+        @content;
+      }
+    }
+
+    /* BELOW 704px (Smaller tablets) */
+    @if $breakpoint == tab-small {
+      @media only screen and (max-width: 44em) {
+        @content;
+      }
+    }
+
+    /* BELOW 544px (Phones) */
+    @if $breakpoint == phone-xl {
+      @media only screen and (max-width: 34em) {
+        @content;
+      }
+    }
+
+    /* BELOW  384px (Phones) */
+    @if $breakpoint == phone {
+      @media only screen and (max-width: 24em) {
+        @content;
+      }
+    }
+}
+
+@mixin ie-only {
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    @content;
+  }
+}
+
+@mixin supportGrid {
+  @supports ( display: grid ) {
+    @content;
+  }
+}
+
+@mixin noSupportGap {
+  .no-flexbox-gap {
+    @content;
+  }
+}

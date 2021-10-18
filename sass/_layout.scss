@@ -1,0 +1,331 @@
+/* HEADER */
+.header {
+    display: flex;
+    align-items: center;
+    padding: 0 4.8rem;
+    height: 9.6rem;
+    background: $main-background;
+
+    @include respond(tab-land) {
+        padding: 0 $section-padding;
+    }
+
+    &.sticky {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        background: rgba(255,255,255,0.95);
+        z-index: 1;
+        height: 8rem;
+        box-shadow: 0 1.2rem 2.8rem rgba(0,0,0,0.03);
+
+        .main-logo {
+            height: 2rem;
+        }
+    }
+}
+
+.main-logo {
+    height: 2.2rem;
+}
+
+/* NAVIGATION */
+.main-nav {
+    margin-left: auto;
+    transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+    @include respond(tab) {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+
+        top: 0;
+        left: 100%;
+        bottom: 0;
+
+        width: 100%;
+        background: rgba(255,255,255,0.9);
+        backdrop-filter: blur(10px);
+    
+        position: fixed;
+        z-index: 2;
+    }
+
+    &__list {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: 2.4rem;
+    
+        @include ie-only {
+            & > * + * {
+                margin-left: 2.4rem;
+            }
+        }
+
+        @include noSupportGap {
+            & > * + * {
+                margin-left: 2.4rem;
+            }
+        }
+
+        @include respond(tab) {
+            flex-direction: column;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            gap: 3.6rem;
+
+            @include noSupportGap {
+                & > * + * {
+                    margin-left: 0;
+                    margin-top: 3.6rem;
+                }
+            }
+
+            @include ie-only {
+                & > * + * {
+                    margin-left: 0;
+                    margin-top: 3.6rem;
+                }
+            }
+        }
+    }
+
+    &__link {
+        display: inline-block;
+        padding: 0.8rem;
+        border-radius: 8px;
+        font-weight: 500;
+        text-decoration: none;
+        transition: all 0.2s;
+
+        @include respond(tab) {
+            font-size: 3rem;
+        }
+
+        &:link,
+        &:visited {
+            color: $base-dark-color;
+        }
+        
+        &:hover,
+        &:active {
+            color: $main-dark-color;
+        }
+
+        &--cta {
+            padding: 1.2rem 2.4rem;
+
+            &:link,
+            &:visited {
+                background: $main-color;
+                color: $on-main-color;
+            }
+            
+            &:hover,
+            &:active {
+                background: $main-dark-color;
+                color: $on-main-color;
+            }
+        }
+    }
+
+    .nav-close {
+        position: absolute;
+        right: 3.2rem;
+        top: 2.4rem;
+    }
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+
+        left: 0;
+    }
+}
+
+/* MOBILE NAVIGATION */
+.mobile-nav-btn {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    margin-left: auto;
+
+    display: none;
+
+    @include respond(tab) {
+        display: block;
+    }
+}
+
+.mobile-nav-icon {
+    width: 4.8rem;
+    height: 4.8rem;
+}
+/* FOOTER */
+.footer {
+    padding: 12.8rem 0;
+    border-top: 1px solid $grey-1;
+    color: $grey-2;
+
+    @include respond(phone-xl) {
+        padding: 8rem 0;
+    }
+
+    &__heading {
+        font-size: 2rem;
+        font-weight: 500;
+        color: $base-dark-color;
+        margin-bottom: 4rem;
+
+        @include respond(phone) {
+            margin-bottom: 2.4rem;
+        }
+    }
+
+    &__nav {
+        list-style: none;
+
+        & > * + * {
+            margin-top: 2.4rem;
+        }
+    }
+
+    &__link {
+        font-size: 1.6rem;
+
+        &:link,
+        &:visited {
+            text-decoration: none;
+            color: currentColor;
+        }
+
+        &:hover,
+        &:active {
+            color: $grey-3;
+        }
+    }
+
+    &__logo {
+        display: block;
+        margin-bottom: 3.2rem;
+    }
+}
+
+.footer-container {
+    display: flex;
+    align-items: stretch;
+    gap: 4.8rem;
+
+    @include noSupportGap {
+        & > * + * {
+            margin-left: 4.8rem;
+        }
+    }
+
+    @include ie-only {
+        & > * + * {
+            margin-left: 4.8rem;
+        }
+    }
+
+    @include respond(tab-small) {
+        flex-wrap: wrap;
+    }
+
+    @include respond(phone) {
+        flex-direction: column;
+        gap: 3.2rem;
+
+        @include noSupportGap {
+            & > * + * {
+                margin-left: 0;
+                margin-top: 3.2rem;
+            }
+        }
+    
+        @include ie-only {
+            & > * + * {
+                margin-left: 0;
+                margin-top: 3.2rem;
+            }
+        }
+    }
+
+}
+
+.logo-col,
+.address-col {
+    flex-basis: 22.5%;
+}
+
+.logo-col {
+    display: flex;
+    flex-direction: column;
+
+    @include respond(tab-small) {
+        order: 4;
+        flex-basis: calc(50% - 4.8rem / 2);
+    }
+}
+
+.address-col {
+    @include respond(tab-small) {
+        order: 5;
+        flex-basis: calc(50% - 4.8rem / 2);
+    }
+}
+
+.nav-col {
+    flex-basis: 18.3333%;
+
+    @include respond(tab-small) {
+        flex-basis: calc((100% - 4.8rem * 2) / 3);
+    }
+}
+
+.contacts {
+    font-size: 1.6rem;
+    font-style: normal;
+    line-height: 1.6;
+    color: $grey-3;
+
+    & > * + * {
+        margin-top: 2.4rem;
+    }
+}
+
+.social-links {
+    list-style: none;
+    display: flex;
+
+    & > * + *  {
+        margin-left: 2.4rem;
+    }
+}
+
+.social-link {
+    font-size: 2.4rem;
+
+
+    &:link,
+    &:visited {
+        color: currentColor;
+    }
+
+    &:hover,
+    &:active {
+        color: $grey-3;
+    }
+}
+
+.copyright {
+    margin-top: auto;
+    font-size: 1.4rem;
+    line-height: 1.6;
+}
+

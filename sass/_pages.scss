@@ -1,0 +1,1070 @@
+#section-layout {
+    padding: $section-spacing 0;
+
+    @include respond(tab-land) {
+        padding: $section-spacing-md 0;
+    }
+
+    @include respond(phone-xl) {
+        padding: $section-spacing-rg 0;
+    }
+}
+/* SECTION HERO */
+
+.sticky .section-hero {
+    margin-top: 9.6rem;
+}
+
+.section-hero {
+    background-color: $main-background;
+    @extend #section-layout;
+    
+}
+
+.hero {
+    max-width: $hero-width;
+    margin: 0 auto;
+    padding: 0 $section-padding;
+    display: flex;
+    align-items: center;
+    gap: $gap-large;
+
+    @include ie-only {
+        & > * + * {
+            margin-left: $gap-large;
+        }
+    }
+
+    @include noSupportGap {
+        & > * + * {
+            margin-left: $gap-large;
+        }
+    }
+
+    @include respond(small-desktop) {
+        max-width: $hero-width-xl;
+        gap: $gap-large-md;
+
+        @include ie-only {
+            & > * + * {
+                margin-left: $gap-large-md;
+            }
+        }
+    
+        @include noSupportGap {
+            & > * + * {
+                margin-left: $gap-large-md;
+            }
+        }
+    }
+
+    @include respond(tab) {
+        flex-direction: column;
+
+        @include ie-only {
+            & > * + * {
+                margin-left: 0;
+                margin-top: $gap-large-md;
+            }
+        }
+    
+        @include noSupportGap {
+            & > * + * {
+                margin-left: 0;
+                margin-top: $gap-large-md;
+            }
+        }
+    }
+
+    &__text-box {
+        flex-basis: 55%;
+
+        @include respond(tab) {
+            text-align: center;
+        }
+    }
+
+    &__img-box {
+        flex-grow: 1;
+        flex-basis: 45%;
+
+        @include respond(tab) {
+            width: 75%;
+        }
+
+        @include respond(phone-xl) {
+            width: 85%;     
+        }
+    }
+
+    &__description {
+        font-size: 2rem;
+        line-height: 1.6;
+        margin-bottom: 4.8rem;
+
+        @include respond(phone) {
+            margin-bottom: 3.6rem;
+        }
+    }
+
+    &__img {
+        width: 100%;
+    }
+}
+
+.delivery {
+    margin-top: 8rem;
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+
+    @include ie-only {
+        & > * + * {
+            margin-left: 1.6rem;
+        }
+    }
+
+    @include noSupportGap {
+        & > * + * {
+            margin-left: 1.6rem;
+        }
+    }
+
+    @include respond(tab) {
+        justify-content: center;
+        margin-top: 3.2rem;
+    }
+
+    &__imgs {
+        white-space: nowrap;
+        img {
+            width: 4.8rem;
+            height: 4.8rem;
+            border: 3px solid $grey-0;
+            border-radius: 50%;
+
+            &:not(:last-child) {
+                margin-right: -2rem;
+            }
+
+            @include respond(tab-land) {
+                width: 4.2rem;
+                height: 4.2rem;
+            }
+        }
+    }
+
+    &__text {
+        font-weight: 600;
+
+        span {
+            color: $main-dark-color;
+        }
+
+        @include respond(tab-land) {
+            font-size: 1.6rem;
+        }
+    }
+}
+
+/* SECTION FEATURED */
+.section-featured {
+    padding: 4.8rem 0 3.2rem 0;
+}
+
+.logos {
+    display: flex;
+    justify-content: space-around;
+
+    @include respond(tab-small) {
+        flex-wrap: wrap;
+        gap: 1.6rem;
+
+        @include ie-only {
+            & > * + * {
+                margin-left: 1.6rem;
+            }
+        }
+    
+        @include noSupportGap {
+            & > * + * {
+                margin-left: 1.6rem;
+            }
+        }
+    }
+
+    img {
+        height: 3.2rem;
+        filter: brightness(0);
+        opacity: 0.5;
+
+        @include respond(tab) {
+            height: 2.4rem;
+        }
+
+        @include respond(phone) {
+            height: 1.6rem
+        }
+    }
+}
+
+
+/* SECTION HOW IT WORKS */
+.section-how {
+    @extend #section-layout;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    gap: 6.4rem;
+
+    @include ie-only {
+        & > * + * {
+            margin-left: 6.4rem;
+        }
+    }
+
+    @include noSupportGap {
+        & > * + * {
+            margin-left: 6.4rem;
+        }
+    }
+
+    @include respond(phone-xl) {
+        flex-direction: column;
+
+        @include ie-only {
+            & > * + * {
+                margin-left: 0;
+                margin-top: 6.4rem;
+            }
+        }
+    
+        @include noSupportGap {
+            & > * + * {
+                margin-left: 0;
+                margin-top: 6.4rem;
+            }
+        }
+    }
+
+    &:not(:last-child) {
+        margin-bottom: $section-spacing;
+
+        @include respond(tab) {
+            margin-bottom: $section-spacing-md;
+        }
+    }
+
+    &__text-box,
+    &__img-box {
+        flex-basis: 50%;
+    }
+
+    &__text-box {
+        @include respond(phone-xl) {
+            order: 2;
+        }
+    }
+
+    &__img-box  {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        @include respond(phone-xl) {
+            order: 1;
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+        }
+
+        &::before {
+            width: 60%;
+            padding-bottom: 60%;
+            background: $tint;
+            z-index: -2;
+
+            @include respond(phone-xl) {
+                width: 75%;
+                padding-bottom: 75%;
+            }
+        }
+
+        &::after {
+            width: 45%;
+            padding-bottom: 45%;
+            background: $orange-light;
+            z-index: -1;
+
+            @include respond(phone-xl) {
+                width: 60%;
+                padding-bottom: 60%;
+            }
+        }
+    }
+    
+    &__img {
+        width: 35%;
+
+        @include respond(phone-xl) {
+            width: 42.5%;
+        }
+    }
+
+    &__number {
+        font-size: 9.8rem;
+        font-weight: 700;
+        color: $grey-1;
+        margin-bottom: 1.2rem;
+
+        @include respond(phone-xl) {
+            font-size: 7.4rem;
+        }
+    }
+
+    &__description {
+        line-height: 1.8;
+    }
+}
+
+/* SECTION MEALS */
+.section-meals {
+    @extend #section-layout;
+}
+
+.meals {
+    display: flex;
+    gap: $gap-medium;
+
+    @include ie-only {
+        & > * + * {
+            margin-left: $gap-medium;
+        }
+    }
+
+    @include noSupportGap {
+        & > * + * {
+            margin-left: $gap-medium;
+        }
+    }
+
+    @include respond(tab-land) {
+        gap: $gap-medium-md;
+
+        @include ie-only {
+            & > * + * {
+                margin-left: $gap-medium-md;
+            }
+        }
+    
+        @include noSupportGap {
+            & > * + * {
+                margin-left: $gap-medium-md;
+            }
+        }
+    }
+
+    @include respond(tab-small) {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    @include respond(phone-xl) {
+        flex-direction: column;
+        align-items: center;
+
+        @include ie-only {
+            & > * + * {
+                margin-left: 0;
+                margin-top: $gap-medium-md;
+            }
+        }
+    
+        @include noSupportGap {
+            & > * + * {
+                margin-left: 0;
+                margin-top: $gap-medium-md;
+            }
+        }
+    }
+}
+
+.meal,
+.diets {
+    flex-basis: 33.33%;
+}
+
+.meal {
+    box-shadow: 0 2.4rem 4.8rem $alpha-1;
+    border-radius: 1.2rem;
+    overflow: hidden;
+    transition: all 0.4s;
+
+    @include respond(tab-small) {
+        flex-basis: calc(50% - #{$gap-medium-md} / 2);
+    }
+
+    &:hover {
+        transform: translateY(-1.2rem);
+        box-shadow: 0 2.4rem 4.8rem $alpha-2;
+    }
+
+    &__img {
+        width: 100%;
+    } 
+
+    &__tag {
+        display: inline-block;
+        padding: 0.4rem 0.8rem;
+        font-size: 1.2rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        
+        color: $base-dark-color;
+        border-radius: 100px;
+
+        &--vegetarian {
+            background: $green;
+        }
+
+        &--vegan {
+            background: $lime;
+        }
+
+        &--paleo {
+            background: $yellow;
+        }
+    }
+
+    &__title {
+        font-size: 2.4rem;
+        color: $base-dark-color;
+        font-weight: 600;
+        margin-bottom: 3.2rem;
+        margin-top: 1.2rem;
+
+        @include respond(tab) {
+            font-size: 2rem;
+        }
+    }
+
+    &__content {
+        padding: 3.2rem 4.8rem 4.8rem 4.8rem;
+
+        @include respond(tab) {
+            padding: 2.4rem 3.2rem 3.2rem 3.2rem;
+        }
+    }
+
+    &__attributes {
+        list-style: none;
+    }
+
+    &__attribute {
+        display: flex;
+        align-items: center;
+        gap: 1.6rem;
+
+        @include ie-only {
+            & > * + * {
+                margin-left: 1.6rem;
+            }
+        }
+    
+        @include noSupportGap {
+            & > * + * {
+                margin-left: 1.6rem;
+            }
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__icon {
+        font-size: 2.4rem;
+        width: 2.4rem;
+        color: $main-dark-color;
+    }
+}
+
+.all-meals {
+    text-align: center;
+    margin-top: 4.8rem;
+}
+
+.all-meals-btn {
+    &:link,
+    &:visited {
+        text-decoration: none;
+        color: $main-dark-color;
+        padding-bottom: 0.2rem;
+        border-bottom: 1px solid currentColor;
+        transition: border-bottom 0.3s;
+    }
+    
+    &:hover,
+    &:active {
+        border-bottom: none;
+    }
+}
+
+/* SECTION TESTIMONIAL */
+
+.section-testimonials {
+    display: flex;
+    align-items: center;
+    background: $tint;
+
+    @include respond(tab) {
+        flex-direction: column;
+    }
+}
+
+.testimonials-container {
+    padding: $section-spacing;
+    flex-basis: 55.5%;
+
+    @include respond(small-desktop) {
+        padding: $section-padding;
+    }
+
+    @include respond(tab) {
+        padding: $section-spacing-md $section-padding;
+    }
+}
+
+.testimonials {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @include supportGrid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 4.8rem;
+        column-gap: 8rem;
+    }
+
+    @include respond(tab) {
+        row-gap: 3.2rem;
+        column-gap: 6.4rem;
+    }
+
+    @include respond(phone-xl) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.testimonial {
+    flex-basis: calc(50% - 4rem);
+
+    &:nth-child(1),
+    &:nth-child(2) {
+        margin-bottom: 4.8rem;
+    }
+
+    @include supportGrid { 
+        &:nth-child(1),
+        &:nth-child(2) {
+            margin-bottom: 0;
+        }
+    }
+
+    &__img {
+        width: 6.4rem;
+        height: 6.4rem;
+        border-radius: 50%;
+        margin-bottom: 1.2rem;
+    }
+
+    &__text {
+        line-height: 1.8;
+        margin-bottom: 1.6rem;
+        color: $base-dark-color;
+    }
+
+    &__name {
+        font-size: 1.6rem;
+        color: $grey-3;
+    }
+}
+
+.gallery {
+    flex-basis: 45%;
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @include supportGrid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.6rem;
+        padding: 1.6rem;
+    }
+
+    @include noSupportGap {
+        & > * + * {
+            margin-left: 1.6rem;
+        }
+    }
+
+    @include respond(small-desktop) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include respond(tab) {
+        grid-template-columns: repeat(4, 1fr);
+        padding: 1.6rem 1.6rem 6.4rem 1.6rem;
+    }
+
+    @include respond(phone-xl) {
+        gap: 0.8rem;
+    }
+
+    &__item {
+        overflow: hidden;
+        flex-basis: calc(33.33% - 0.8rem);
+        margin-bottom: 1.6rem;
+
+        @include supportGrid {
+            margin-bottom: 0;
+        }
+    }
+
+    &__img {
+        display: block;
+        width: 100%;
+        transition: transform 0.3s;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}
+
+/* SECTION PRICING */
+.section-pricing {
+    @extend #section-layout;
+}
+
+.pricing-plans {
+    display: flex;
+    justify-content: center;
+    gap: $gap-medium;
+    margin-bottom: 4.8rem;
+
+    @include ie-only {
+        & > * + * {
+            margin-left: $gap-medium;
+        }
+    }
+
+    @include noSupportGap {
+        & > * + * {
+            margin-left: $gap-medium;
+        }
+    }
+
+    @include respond(tab) {
+        gap: $gap-medium-md;
+
+        @include ie-only {
+            & > * + * {
+                margin-left: $gap-medium-md;
+            }
+        }
+    
+        @include noSupportGap {
+            & > * + * {
+                margin-left: $gap-medium-md;
+            }
+        }
+    }
+
+    @include respond (phone-xl) {
+        flex-wrap: wrap;
+    }
+}
+
+.pricing-plan {
+    flex-basis: 37.5%;
+    border-radius: 12px;
+    padding: 4.8rem;
+
+    @include respond(tab) {
+        flex-basis: 42%;
+        padding: 3.6rem;
+    }
+
+    @include respond(tab-small) {
+        flex-basis: 50%;
+    }
+
+    @include respond (phone-xl) {
+        flex-basis: 100%;
+    }
+
+    &--starter {
+        background: $grey-0;
+        border: 3px solid $orange-light;
+    }
+
+    &--complete {
+        background: $tint;
+        position: relative;
+        overflow: hidden;
+
+        &::after {
+            content: "Best Value";
+            position: absolute;
+            top: 5%;
+            right: -12%;
+
+            text-transform: uppercase;
+            font-size: 1.4rem;
+            font-weight: 700;
+            background-color: $yellow;
+            color: $base-dark-color;
+            padding: 0.8rem 5rem;
+            transform: rotate(45deg);
+
+            @include respond (tab) {
+                top: 6%;
+                right: -20%;
+                padding: 0.8rem 8rem;
+            }
+
+            @include respond (tab-small) {
+                top: 6%;
+                right: -24%;
+            }
+
+            @include respond (phone-xl) {
+                top: 10%;
+                right: -15%;
+            }
+
+            @include respond (phone) {
+                top: 6%;
+                right: -22%;
+            }
+        }
+    }
+}
+
+.plan {
+    &__header {
+        text-align: center;
+        margin-bottom: 4.8rem;
+    }
+
+    &__name {
+        color: $main-dark-color;
+        font-size: 2rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.75;
+        margin-bottom: 3.2rem;
+    }
+
+    &__price {
+        font-size: 6.2rem;
+        font-weight: 600;
+        color: $base-dark-color;
+        margin-bottom: 1.6rem;
+
+        span {
+            font-size: 3rem;
+            font-weight: 500;
+            margin-right: 0.8rem;
+        }
+    }
+
+    &__text {
+        font-size: 1.6rem;
+        line-height: 1.6;
+        color: $grey-2;
+    }
+
+    &__sign {
+        text-align: center;
+        margin-top: 4.8rem;
+    }
+}
+
+.plans-details {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.features {
+    display: flex;
+    gap: $gap-medium;
+    margin-top: $gap-large;
+
+    @include ie-only {
+        & > * + * {
+            margin-left: $gap-medium;
+        }
+    }
+
+    @include noSupportGap {
+        & > * + * {
+            margin-left: $gap-medium;
+        }
+    }
+
+    @include respond(tab-land) {
+        margin-top: $gap-large-md;
+        gap: $gap-medium-md;
+
+        @include ie-only {
+            & > * + * {
+                margin-left: $gap-medium-md;
+            }
+        }
+    
+        @include noSupportGap {
+            & > * + * {
+                margin-left: $gap-medium-md;
+            }
+        }
+    }
+
+    @include respond(tab-small) {
+        flex-wrap: wrap;
+    }
+
+    @include respond(phone-xl) {
+        flex-direction: column;
+
+        @include ie-only {
+            & > * + * {
+                margin-left: 0;
+                margin-top: $gap-medium-md;
+            }
+        }
+    
+        @include noSupportGap {
+            & > * + * {
+                margin-left: 0;
+                margin-top: $gap-medium-md;
+            }
+        }
+    }
+}
+
+.feature {
+    flex-basis: 25%;
+
+    @include respond(tab-small) {
+        flex-basis: calc(50% - #{$gap-medium-md} / 2);
+    }
+
+    &__icon {
+        color: $main-dark-color;
+        height: 3.2rem;
+        width: 3.2rem;
+        margin-bottom: 3.2rem;
+        padding: 1.6rem;
+        background: $orange-light;
+        border-radius: 50%;
+
+        @include ie-only {
+            width: 6.4rem;
+            height: 6.4rem;
+            padding: 0;
+            display: block;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        &--infinite {
+            @include ie-only {
+                background-image: url(../img/featured/infinite-outline.png);
+            }
+        }
+
+        &--nutrition {
+            @include ie-only {
+                background-image: url(../img/featured/nutrition-outline.png);
+            }
+        }
+
+        &--leaf {
+            @include ie-only {
+                background-image: url(../img/featured/leaf-outline.png);
+            }
+        }
+
+        &--pause {
+            @include ie-only {
+                background-image: url(../img/featured/pause-outline.png);
+            }
+        }
+    }
+
+    &__title {
+        font-size: 2.4rem;
+        font-weight: 700;
+        color: $base-dark-color;
+        margin-bottom: 1.6rem;
+
+        @include respond(tab) {
+            font-size: 2rem;
+        }
+    }
+
+    &__text {
+        line-height: 1.8;
+    }
+}
+/* SECTION CTA */
+.section-cta {
+    padding: 4.8rem 0 12.8rem;
+
+    @include respond(phone-xl) {
+        padding: 3.2rem 0 9.6rem;
+    }
+}
+
+.cta {
+    display: flex;
+    background: $orange-medium;
+    background-image: linear-gradient(to bottom right, $orange, $orange-medium);
+    border-radius: 11px;
+    box-shadow: 0 2.4rem 4.8rem rgba(0,0,0,0.15);
+    overflow: hidden;
+
+    @include respond(phone-xl) {
+        flex-direction: column;
+    }
+
+    .heading--secondary {
+        margin-bottom: 3.2rem;
+        color: $brown;
+    }
+
+    &__text-box {
+        flex-basis: 66.66%;
+        padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+        color: $brown;
+
+        @include respond(tab) {
+            flex-basis: 57.5%;;
+        }
+
+        @include respond(tab) {
+            padding: 4.8rem;
+        }
+
+        @include respond(phone-xl) {
+           order: 2;
+           padding: 3.2rem 4.8rem 4.8rem 4.8rem;
+        }
+
+        @include respond(phone) {
+            padding: 3.2rem;
+        }
+    }
+
+    &__text {
+        line-height: 1.8;
+        margin-bottom: 4.8rem;
+    }
+
+    &__img-box {
+        flex-basis: 33.34%;
+        background-image: linear-gradient( to right bottom, rgba(235, 151, 78, 0.35), rgba(230, 125, 34, 0.35) ), url(../img/eating.jpg);
+        background-size: cover;
+        background-position: center;
+
+        @include respond(tab) {
+            flex-basis: 42.5%;
+        }
+
+        @include respond(phone-xl) {
+            padding-bottom: 75%;
+            order: 1;
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        @include supportGrid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            row-gap: 2.4rem;
+            column-gap: 3.2rem;
+        }
+
+        & > * {
+            flex-basis: calc(50% - 1.2rem);
+            margin-top: 2.4rem;
+
+            @include supportGrid {
+                margin-top: 0;
+            }
+        }
+
+        @include respond(tab) {
+            grid-template-columns: 1fr;
+        }        
+    }
+
+    &__label {
+        display: block;
+        font-size: 1.6rem;
+        font-weight: 500;
+        margin-bottom: 1.2rem;
+    }
+
+    &__control {
+        width: 100%;
+        padding: 1.2rem;
+        font-family: inherit;
+        font-size: inherit;
+        border-radius: 9px;
+        background: $tint;
+        outline: none;
+        border: none;
+
+        &:focus {
+            box-shadow: 0 0 0 0.8rem rgba($tint, 0.5);
+        }
+    }
+
+    &__submit {
+        align-self: end;
+        font-weight: 700;
+        font-size: 2rem;
+        background: $brown;
+        color: $tint;
+        cursor: pointer;
+        transition: all 0.2s;
+
+        &:hover,
+        &:active {
+            background: $tint;
+            color: $brown;
+        }
+    }
+}
