@@ -13,10 +13,9 @@
     <link rel="shortcut icon" href="img/favicon.png" type="image/png">
     <link rel="apple-touch-icon" href="img/apple-touch-icon.png" type="image/png">
 
+    <link rel="stylesheet" href="css/aos.css">
     <link rel="stylesheet" href="css/style.css">
 
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <script src="script.js" defer></script>
     <title>Omnifood - Never cook again</title>
 </head>
 
@@ -46,7 +45,7 @@
     <main>
         <section class="section-hero">
             <div class="hero container">
-                <div class="hero__text-box">
+                <div class="hero__text-box" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">
                     <h1 class="heading--primary">
                         A healthy meal delivered to your door, every single day
                     </h1>
@@ -71,7 +70,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="hero__img-box">
+                <div class="hero__img-box" data-aos="fade-left" data-aos-delay="500" data-aos-duration="500">
                     <picture>
                         <source srcset="img/hero.webp" type="image/webp">
                         <source srcset="img/hero.png" type="image/png">
@@ -93,13 +92,14 @@
             </div>
         </section>
         <section class="section-how" id="how">
-            <div class="container">
+            <div class="container" data-aos="zoom-in-down" data-aos-duration="500">
                 <span class="subheading">How it works</span>
                 <h2 class="heading--secondary">Your daily dose of health in 3 simple steps</h2>
             </div>
             <div class="container">
                 <div class="step">
-                    <div class="step__text-box">
+                    <div class="step__text-box" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
+                        data-aos-delay="600" data-aos-duration="500">
                         <p class="step__number">01</p>
                         <h3 class="heading--tertiary">Tell us what you like (and what not)</h3>
                         <p class="step__description">
@@ -108,17 +108,18 @@
                             vitamins you need, no matter what diet you follow!
                         </p>
                     </div>
-                    <div class="step__img-box">
+                    <div class="step__img-box" data-aos="zoom-out" data-aos-delay="200" data-aos-duration="500">
                         <img src="./img/app/app-screen-1.png" alt="Iphone app preferences selection screen"
                             class="step__img">
                     </div>
                 </div>
                 <div class="step">
-                    <div class="step__img-box">
+                    <div class="step__img-box" data-aos="zoom-out" data-aos-delay="200" data-aos-duration="500">
                         <img src="./img/app/app-screen-2.png" alt="Iphone app preferences selection screen"
                             class="step__img">
                     </div>
-                    <div class="step__text-box">
+                    <div class="step__text-box" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
+                        data-aos-delay="600" data-aos-duration="500">
                         <p class="step__number">02</p>
                         <h3 class="heading--tertiary">Approve your weekly meal plan</h3>
                         <p class="step__description">
@@ -128,7 +129,8 @@
                     </div>
                 </div>
                 <div class="step">
-                    <div class="step__text-box">
+                    <div class="step__text-box" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
+                        data-aos-delay="800" data-aos-duration="500">
                         <p class="step__number">03</p>
                         <h3 class="heading--tertiary">Receive meals at convenient time</h3>
                         <p class="step__description">
@@ -136,7 +138,7 @@
                             door whenever works best for you. You can change delivery schedule and address daily!
                         </p>
                     </div>
-                    <div class="step__img-box">
+                    <div class="step__img-box" data-aos="zoom-out" data-aos-delay="400" data-aos-duration="500">
                         <img src="./img/app/app-screen-3.png" alt="Iphone app preferences selection screen"
                             class="step__img">
                     </div>
@@ -244,10 +246,12 @@
         </section>
         <section class="section-testimonials" id="testimonials">
             <div class="testimonials-container">
-                <span class="subheading">Testimonials</span>
-                <h2 class="heading--secondary">Once you try it, you can't go back</h2>
+                <span class="subheading" data-aos="fade-right" data-aos-delay="200"
+                    data-aos-duration="600">Testimonials</span>
+                <h2 class="heading--secondary" data-aos="fade-right" data-aos-delay="300" data-aos-duration="600">Once
+                    you try it, you can't go back</h2>
                 <div class="testimonials">
-                    <figure class="testimonial">
+                    <figure class="testimonial" data-aos="fade-down" data-aos-delay="400" data-aos-duration="800">
                         <img src="./img/customers/dave.jpg" alt="Photo of customer Dave Bryson"
                             class="testimonial__img">
                         <blockquote class="testimonial__text">
@@ -256,7 +260,7 @@
                         </blockquote>
                         <p class="testimonial__name">&mdash; Dave Bryson</p>
                     </figure>
-                    <figure class="testimonial">
+                    <figure class="testimonial" data-aos="fade-down" data-aos-delay="400" data-aos-duration="800">
                         <img src="./img/customers/ben.jpg" alt="Photo of customer Ben Hadley" class="testimonial__img">
                         <blockquote class="testimonial__text">
                             The AI algorithm is crazy good, it chooses the right meals for me every time. It's amazing
@@ -264,7 +268,7 @@
                         </blockquote>
                         <p class="testimonial__name">&mdash; Ben Hadley</p>
                     </figure>
-                    <figure class="testimonial">
+                    <figure class="testimonial" data-aos="fade-up" data-aos-delay="400" data-aos-duration="800">
                         <img src="./img/customers/steve.jpg" alt="Photo of customer Steve Miller"
                             class="testimonial__img">
                         <blockquote class="testimonial__text">
@@ -273,7 +277,7 @@
                         </blockquote>
                         <p class="testimonial__name">&mdash; Steve Miller</p>
                     </figure>
-                    <figure class="testimonial">
+                    <figure class="testimonial" data-aos="fade-up" data-aos-delay="400" data-aos-duration="800">
                         <img src="./img/customers/hannah.jpg" alt="Photo of customer Dave Bryson"
                             class="testimonial__img">
                         <blockquote class="testimonial__text">
@@ -286,30 +290,42 @@
             </div>
 
             <div class="gallery">
-                <figure class="gallery__item"><img src="./img/gallery/gallery-1.jpg"
-                        alt="Photo of beautiful arranged food" class="gallery__img"></figure>
-                <figure class="gallery__item"><img src="./img/gallery/gallery-2.jpg"
-                        alt="Photo of beautiful arranged food" class="gallery__img"></figure>
-                <figure class="gallery__item"><img src="./img/gallery/gallery-3.jpg"
-                        alt="Photo of beautiful arranged food" class="gallery__img"></figure>
-                <figure class="gallery__item"><img src="./img/gallery/gallery-4.jpg"
-                        alt="Photo of beautiful arranged food" class="gallery__img"></figure>
-                <figure class="gallery__item"><img src="./img/gallery/gallery-5.jpg"
-                        alt="Photo of beautiful arranged food" class="gallery__img"></figure>
-                <figure class="gallery__item"><img src="./img/gallery/gallery-6.jpg"
-                        alt="Photo of beautiful arranged food" class="gallery__img"></figure>
-                <figure class="gallery__item"><img src="./img/gallery/gallery-7.jpg"
-                        alt="Photo of beautiful arranged food" class="gallery__img"></figure>
-                <figure class="gallery__item"><img src="./img/gallery/gallery-8.jpg"
-                        alt="Photo of beautiful arranged food" class="gallery__img"></figure>
-                <figure class="gallery__item"><img src="./img/gallery/gallery-9.jpg"
-                        alt="Photo of beautiful arranged food" class="gallery__img"></figure>
-                <figure class="gallery__item"><img src="./img/gallery/gallery-10.jpg"
-                        alt="Photo of beautiful arranged food" class="gallery__img"></figure>
-                <figure class="gallery__item"><img src="./img/gallery/gallery-11.jpg"
-                        alt="Photo of beautiful arranged food" class="gallery__img"></figure>
-                <figure class="gallery__item"><img src="./img/gallery/gallery-12.jpg"
-                        alt="Photo of beautiful arranged food" class="gallery__img"></figure>
+                <figure class="gallery__item" data-aos="zoom-in-up" data-aos-delay="100" data-aos-duration="200"><img
+                        src="./img/gallery/gallery-1.jpg" alt="Photo of beautiful arranged food" class="gallery__img">
+                </figure>
+                <figure class="gallery__item" data-aos="zoom-in-up" data-aos-delay="100" data-aos-duration="800"><img
+                        src="./img/gallery/gallery-2.jpg" alt="Photo of beautiful arranged food" class="gallery__img">
+                </figure>
+                <figure class="gallery__item" data-aos="zoom-in-up" data-aos-delay="110" data-aos-duration="800"><img
+                        src="./img/gallery/gallery-3.jpg" alt="Photo of beautiful arranged food" class="gallery__img">
+                </figure>
+                <figure class="gallery__item" data-aos="zoom-in-up" data-aos-delay="120" data-aos-duration="800"><img
+                        src="./img/gallery/gallery-4.jpg" alt="Photo of beautiful arranged food" class="gallery__img">
+                </figure>
+                <figure class="gallery__item" data-aos="zoom-in-up" data-aos-delay="130" data-aos-duration="800"><img
+                        src="./img/gallery/gallery-5.jpg" alt="Photo of beautiful arranged food" class="gallery__img">
+                </figure>
+                <figure class="gallery__item" data-aos="zoom-in-up" data-aos-delay="140" data-aos-duration="800"><img
+                        src="./img/gallery/gallery-6.jpg" alt="Photo of beautiful arranged food" class="gallery__img">
+                </figure>
+                <figure class="gallery__item" data-aos="zoom-in-up" data-aos-delay="150" data-aos-duration="800"><img
+                        src="./img/gallery/gallery-7.jpg" alt="Photo of beautiful arranged food" class="gallery__img">
+                </figure>
+                <figure class="gallery__item" data-aos="zoom-in-up" data-aos-delay="160" data-aos-duration="800"><img
+                        src="./img/gallery/gallery-8.jpg" alt="Photo of beautiful arranged food" class="gallery__img">
+                </figure>
+                <figure class="gallery__item" data-aos="zoom-in-up" data-aos-delay="170" data-aos-duration="800"><img
+                        src="./img/gallery/gallery-9.jpg" alt="Photo of beautiful arranged food" class="gallery__img">
+                </figure>
+                <figure class="gallery__item" data-aos="zoom-in-up" data-aos-delay="180" data-aos-duration="800"><img
+                        src="./img/gallery/gallery-10.jpg" alt="Photo of beautiful arranged food" class="gallery__img">
+                </figure>
+                <figure class="gallery__item" data-aos="zoom-in-up" data-aos-delay="190" data-aos-duration="800"><img
+                        src="./img/gallery/gallery-11.jpg" alt="Photo of beautiful arranged food" class="gallery__img">
+                </figure>
+                <figure class="gallery__item" data-aos="zoom-in-up" data-aos-delay="200" data-aos-duration="800"><img
+                        src="./img/gallery/gallery-12.jpg" alt="Photo of beautiful arranged food" class="gallery__img">
+                </figure>
             </div>
         </section>
         <section class="section-pricing" id="pricing">
@@ -413,7 +429,7 @@
         </section>
         <section class="section-cta" id="cta">
             <div class="container">
-                <div class="cta">
+                <div class="cta" data-aos="flip-up" data-aos-delay="200" data-aos-duration="600">
                     <div class="cta__text-box">
                         <h2 class="heading--secondary">Get your first meal for free!</h2>
                         <p class="cta__text">Healthy, tasty and hassle-free meals are waiting for you. Start eating well
@@ -516,6 +532,11 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
